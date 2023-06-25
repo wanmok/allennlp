@@ -50,11 +50,11 @@ def parse_requirements_file(path, allowed_extras: set = None, include_all_extra:
     return requirements, extras
 
 
-integrations = {"checklist"}
+# integrations = {"checklist"}
 
 # Load requirements.
 install_requirements, extras = parse_requirements_file(
-    "requirements.txt", allowed_extras=integrations
+    "requirements.txt"
 )
 dev_requirements, dev_extras = parse_requirements_file(
     "dev-requirements.txt", allowed_extras={"examples"}, include_all_extra=False
